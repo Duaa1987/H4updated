@@ -30,17 +30,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="151dp"
+        android:layout_alignStart="@+id/buyCard"
+        android:layout_marginBottom="149dp"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/buyCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="126dp"
+        android:layout_above="@+id/remain"
+        android:layout_alignStart="@+id/remain"
         android:text="TextView" />
 
     <Button
@@ -57,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/button1"
-        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/name2"
         android:text="TextView" />
 
     <ImageButton
@@ -220,6 +219,31 @@
         android:layout_alignTop="@+id/imagebutton1"
         android:layout_centerHorizontal="true"
         android:src="@drawable/meoth" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/buyCard"
+        android:layout_marginStart="36dp"
+        android:text="you will use " />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView4"
+        android:layout_alignTop="@+id/Txt_Display"
+        android:text="You have " />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignStart="@+id/textView7"
+        android:text="Your remain is :" />
 
 
 </RelativeLayout>

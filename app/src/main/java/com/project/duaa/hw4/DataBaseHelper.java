@@ -22,7 +22,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,GOLD INTEGER)");
-        insertData(db, 20000000);
+        insertData(db, 2000);
 
 
     }

@@ -31,6 +31,8 @@ public class PurchasePacksFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final DataBaseHelper myDb;
+        final DataBaseHelper2 myDb2;
+
         Button btnviewAll;
 
 
@@ -40,6 +42,8 @@ public class PurchasePacksFragment extends Fragment {
         ImageButton imageButton,imageButton2,imageButton3,imageButton4,imageButton5,imageButton6;
              //
         myDb = new DataBaseHelper(getActivity());
+        myDb2 = new DataBaseHelper2(getActivity());
+
         Cursor res = myDb.getAllData();
         res.moveToFirst();
         int gold = res.getInt(1);
@@ -82,6 +86,25 @@ public class PurchasePacksFragment extends Fragment {
                 intPackValue++;
 
                 textView1.setText(String.valueOf(intPackValue));
+
+                //
+
+              //  boolean isInserted = myDb2.insertData2(name1.getText().toString(),
+                     //   textView1.getText().toString());
+
+               /* int s=Integer.parseInt(textView1.getText().toString());
+                int have=Integer.parseInt(Txt_Display.getText().toString());
+                int remained=have-s*100;
+                boolean isUpdate = myDb.updateData("1",
+                        String.valueOf(remained));
+                if(isUpdate == true)
+                    Toast.makeText(getActivity(),"Data Update",Toast.LENGTH_LONG).show();
+
+                else
+                    Toast.makeText(getActivity(),"Data not Updated",Toast.LENGTH_LONG).show();
+
+               */
+
             }
         });
 
@@ -93,6 +116,26 @@ public class PurchasePacksFragment extends Fragment {
                 intPackValue++;
 
                 textView2.setText(String.valueOf(intPackValue));
+
+
+                //
+
+              //  boolean isInserted = myDb2.insertData2(name2.getText().toString(),
+                  //      textView2.getText().toString());
+
+                //
+                int s=Integer.parseInt(textView2.getText().toString());
+                int have=Integer.parseInt(Txt_Display.getText().toString());
+                /*int remained=have-s*100;
+                boolean isUpdate = myDb.updateData("1",
+                        String.valueOf(remained));
+
+                if(isUpdate == true)
+                    Toast.makeText(getActivity(),"Data Update",Toast.LENGTH_LONG).show();
+
+                else
+                    Toast.makeText(getActivity(),"Data not Updated",Toast.LENGTH_LONG).show();
+                    */
             }
         });
 
@@ -105,6 +148,23 @@ public class PurchasePacksFragment extends Fragment {
                 intPackValue++;
 
                 textView3.setText(String.valueOf(intPackValue));
+
+
+                //
+              //  boolean isInserted = myDb2.insertData2(name3.getText().toString(),
+              //          textView3.getText().toString());
+                /*
+                int s=Integer.parseInt(textView3.getText().toString());
+                int have=Integer.parseInt(Txt_Display.getText().toString());
+                int remained=have-s*100;
+                boolean isUpdate = myDb.updateData("1",
+                        String.valueOf(remained));
+                if(isUpdate == true)
+                    Toast.makeText(getActivity(),"Data Update",Toast.LENGTH_LONG).show();
+
+                else
+                    Toast.makeText(getActivity(),"Data not Updated",Toast.LENGTH_LONG).show();
+                */
             }
         });
 
@@ -117,6 +177,26 @@ public class PurchasePacksFragment extends Fragment {
                 intPackValue++;
 
                 textView4.setText(String.valueOf(intPackValue));
+
+                //
+
+              //  boolean isInserted = myDb2.insertData2(name4.getText().toString(),
+              //          textView4.getText().toString());
+
+                /*
+
+                int s=Integer.parseInt(textView4.getText().toString());
+                int have=Integer.parseInt(Txt_Display.getText().toString());
+                int remained=have-s*100;
+                boolean isUpdate = myDb.updateData("1",
+                        String.valueOf(remained));
+                if(isUpdate == true)
+                    Toast.makeText(getActivity(),"Data Update",Toast.LENGTH_LONG).show();
+
+                else
+                    Toast.makeText(getActivity(),"Data not Updated",Toast.LENGTH_LONG).show();
+
+                    */
             }
         });
 
@@ -128,6 +208,24 @@ public class PurchasePacksFragment extends Fragment {
                 intPackValue++;
 
                 textView5.setText(String.valueOf(intPackValue));
+
+                //
+
+                boolean isInserted = myDb2.insertData2(name5.getText().toString(),
+                        textView5.getText().toString());
+
+                /*
+                int s=Integer.parseInt(textView5.getText().toString());
+                int have=Integer.parseInt(Txt_Display.getText().toString());
+                int remained=have-s*100;
+                boolean isUpdate = myDb.updateData("1",
+                        String.valueOf(remained));
+                if(isUpdate == true)
+                    Toast.makeText(getActivity(),"Data Update",Toast.LENGTH_LONG).show();
+
+                else
+                    Toast.makeText(getActivity(),"Data not Updated",Toast.LENGTH_LONG).show();
+                    */
             }
         });
 
@@ -140,6 +238,22 @@ public class PurchasePacksFragment extends Fragment {
                 intPackValue++;
 
                 textView6.setText(String.valueOf(intPackValue));
+
+               // boolean isInserted = myDb2.insertData2(name6.getText().toString(),
+               //         textView6.getText().toString());
+
+                /*
+                int s=Integer.parseInt(textView6.getText().toString());
+                int have=Integer.parseInt(Txt_Display.getText().toString());
+                int remained=have-s*100;
+                boolean isUpdate = myDb.updateData("1",
+                        String.valueOf(remained));
+                if(isUpdate == true)
+                    Toast.makeText(getActivity(),"Data Update",Toast.LENGTH_LONG).show();
+
+                else
+                    Toast.makeText(getActivity(),"Data not Updated",Toast.LENGTH_LONG).show();
+                    */
             }
         });
 
@@ -180,6 +294,23 @@ public class PurchasePacksFragment extends Fragment {
 
                      else
                          Toast.makeText(getActivity(),"Data not Updated",Toast.LENGTH_LONG).show();
+
+
+                 boolean isInserted = myDb2.insertData2(name1.getText().toString(),
+                         textView1.getText().toString());
+                 boolean isInserted2 = myDb2.insertData2(name2.getText().toString(),
+                         textView2.getText().toString());
+                 boolean isInserted3 = myDb2.insertData2(name3.getText().toString(),
+                         textView3.getText().toString());
+                 boolean isInserted4 = myDb2.insertData2(name4.getText().toString(),
+                         textView4.getText().toString());
+                 boolean isInserted5 = myDb2.insertData2(name5.getText().toString(),
+                         textView5.getText().toString());
+                 boolean isInserted6 = myDb2.insertData2(name6.getText().toString(),
+                         textView6.getText().toString());
+
+
+
 
                  textView1.setText("0");
                  textView2.setText("0");
